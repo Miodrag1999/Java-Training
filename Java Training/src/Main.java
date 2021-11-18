@@ -1,27 +1,31 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean ok = true;
+        int x,y=0,temp=0;
         while (ok) {
-            System.out.println("Enter a number below 101: ");
+            System.out.println("Enter a number from 1 to 99999: ");
             int n = sc.nextInt();
-            if (n>100){
-                System.out.println("Number is over 100, please try again. ");
+            if (n<1 || n>99999){
+                System.out.println("Number is out of range. ");
             }
             else {
                 ok = false;
-                if (n%3==0 && n%5==0){
-                    System.out.println("FizzBuzz");
+                y=n;
+                while(n>0)
+                {
+                   x=n%10;
+                   n=n/10;
+                   temp=temp*10+x;
                 }
-                else if (n%3==0){
-                    System.out.println("Buzz");
+                if(temp==y){
+                    System.out.println("E palindrom.");
                 }
-                else if (n%5==0){
-                    System.out.println("Fizz");
+                else{
+                    System.out.println("Nu e palindrom.");
                 }
-                else System.out.println("The number isn't divisible with 3 or 5. ");
             }
         }
     }
