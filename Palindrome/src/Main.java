@@ -21,10 +21,10 @@ public class Main {
                     temp=temp*10+x;
                 }
                 if(temp==y){
-                    System.out.println("E palindrom.");
+                    System.out.println("Palindrome");
                 }
                 else{
-                    System.out.println("Nu e palindrom.");
+                    System.out.println("Not palindrome");
                 }
             }
         }
